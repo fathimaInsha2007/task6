@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+    }
+
+    body {
+      background-color: rgb(24, 24, 24);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page {
+      height: 100vh;
+      width: 80%;
+    }
+
+    main {
+      width: 100%;
+      height: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      height: 10%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      background-color: rgb(24, 24, 24);
+    }
+
+    .part {
+      height: 10%;
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      color: white;
+      background-color: rgb(24, 24, 24);
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    .logo img {
+      height: 50px;
+      width: 80px;
+    }
+
+    .Tech {
+      font-weight: bold;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+
+    .logo p {
+      font-size: 18px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+
+    menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    menu button {
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    menu .contact {
+      color: rgb(7, 68, 158);
+    }
+
+    menu select {
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .start {
+      height: 30px;
+      border-radius: 20px;
+      background-color: white;
+      color: black;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .left {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 0;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+
+    .text p {
+      font-size: 50px;
+      color: white;
+    }
+
+    .contact {
+      font-weight: 100;
+      color: rgb(194, 192, 192);
+    }
+
+    .text h6 {
+      color: rgb(194, 192, 192);
+    }
+
+    .location {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 100px;
+      color: white;
+      margin-left: 0px;
+    }
+
+    .location p {
+      font-size: 15px;
+      color: rgb(194, 192, 192);
+    }
+
+    a {
+      color: rgb(7, 68, 158);
+    }
+
+    .right {
+      background-color: black;
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+      height: 60%;
+      border-radius: 30px;
+      margin-top: 50px;
+      padding: 30px;
+    }
+
+    .name {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      gap: 15px;
+      color: white;
+    }
+    .fullname,
+    .email {
+      width: 50%;
+    }
+
+    .number {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      color: white;
+      gap: 10px;
+    }
+
+    .right input,
+    textarea {
+      width: 100%;
+      height: 40px;
+      background-color: transparent;
+      border: none;
+      color: white;
+      border-bottom: 1px solid rgb(74, 73, 73);
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+    }
+
+    .star {
+      color: red;
+    }
+
+    .send {
+      background-color: rgb(53, 104, 225);
+      border: none;
+      width: 150px;
+      border-radius: 20px;
+      padding: 10px;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .name input {
+      margin-bottom: 10px;
+    }
+
+    .number textarea {
+      margin-bottom: 20px;
+      height: 100px;
+    }
+  </style>
+</body>
+
+</html>
+</head>
+
+<body>
+  <header>
+    <div class="part">
+      <div class="logo">
+        <img src="Logo-icon.png" alt="" stytle="vertical align:right" width="100" height="100" />
+        <p>ideen</p>
+        <h3 class="Tech">Tech</h3>
+      </div>
+      <menu>
+        <select name="About" id="about">
+          <option value="">About</option>
+        </select>
+        <select name="About" id="about">
+          <option value="">service</option>
+        </select>
+        <button class="btn">Portfolio</button>
+        <select name="About" id="about">
+          <option value="">Insights</option>
+        </select>
+        <button class="btn">Career</button>
+        <a href="#"><button class="contact">Contact</button></a>
+      </menu>
+      <button class="start">
+        Start Project
+        <h2>↗</h2>
+      </button>
+    </div>
+  </header>
+  <div class="page">
+    <main>
+      <div class="left">
+        <div class="contact">
+          <h5>•Contact Us</h5>
+        </div>
+        <div class="text">
+          <p>Let's make your brand brilliant</p>
+          <h6>
+            if you would like to work with us or just want to get in touch,
+            we'd love to hear from you!
+          </h6>
+        </div>
+        <div class="location">
+          <section class="section1">
+            <h3>Location</h3>
+            <br />
+            <p>Ernakulam,kerala,india</p>
+          </section>
+          <section class="section2">
+            <h3>Email</h3>
+            <br />
+            <p>info@ideenkreisetech.com</p>
+          </section>
+        </div>
+        <a href="#">+91 9961942022</a>
+      </div>
+      <div class="right">
+        <div class="name">
+          <div class="fullname">
+            <label>Full Name</label>
+            <span class="star">*</span>
+            <input type="text" required />
+          </div>
+          <div class="email">
+            <label>Email</label>
+            <span class="star">*</span>
+            <input type="email" required />
+          </div>
+        </div>
+        <div class="number">
+          <div class="mobile">
+            <label>Mobile Number</label>
+            <span class="star">*</span>
+            <input type="tel" required />
+          </div>
+          <div class="textarea">
+            <label>Your Requirement</label>
+            <span class="star">*</span>
+            <textarea rows="5" required></textarea>
+          </div>
+        </div>
+        <button class="send">
+          Send
+          <h3>↗</h3>
+        </button>
+      </div>
+    </main>
+  </div>
